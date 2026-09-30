@@ -1,0 +1,161 @@
+/* ===== 全体 ===== */
+.root {
+    -fx-font-family: "Yu Gothic UI", "Meiryo", "Hiragino Sans", "Noto Sans CJK JP", sans-serif;
+    -fx-font-size: 13px;
+    -fx-accent: #2563eb;
+    -fx-focus-color: #2563eb;
+}
+
+.root-pane {
+    -fx-background-color: #f5f7fa;
+}
+
+.app-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+.primary-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+}
+
+.primary-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+/* ===== 画面切り替えタブ (応募管理 / 気になる) ===== */
+.main-tabs > .tab-header-area {
+    -fx-padding: 0 20 0 20;
+}
+
+.main-tabs > .tab-header-area > .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.main-tabs .tab {
+    -fx-padding: 4 16 4 16;
+}
+
+.main-tabs .tab:selected .tab-label {
+    -fx-font-weight: bold;
+}
+
+/* ===== ステータスタブ ===== */
+.status-tabs {
+    -fx-border-color: transparent transparent #d1d5db transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.status-tab {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 8 14 8 14;
+    -fx-text-fill: #4b5563;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 3 0;
+}
+
+.status-tab:hover {
+    -fx-text-fill: #111827;
+    -fx-background-color: #e5e7eb;
+}
+
+.status-tab:selected {
+    -fx-text-fill: #1d4ed8;
+    -fx-font-weight: bold;
+    -fx-border-color: #2563eb;
+}
+
+/* ===== 一覧 ===== */
+.job-table {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    /* 選択行は薄い青。濃い青だと「開く」リンクや面接日時の文字色と重なって読めない */
+    -fx-selection-bar: #dbeafe;
+    -fx-selection-bar-non-focused: #e8f0fe;
+}
+
+.job-table .table-row-cell {
+    -fx-cell-size: 40px;
+}
+
+.job-table .table-cell {
+    -fx-alignment: center-left;
+}
+
+.status-combo {
+    -fx-background-radius: 12;
+    -fx-font-weight: bold;
+}
+
+.status-combo.status-applied          { -fx-base: #e0e7ff; }
+.status-combo.status-casual-interview { -fx-base: #cffafe; }
+.status-combo.status-in-selection     { -fx-base: #fef3c7; }
+.status-combo.status-offered          { -fx-base: #bbf7d0; }
+.status-combo.status-offer-declined   { -fx-base: #e5e7eb; }
+.status-combo.status-rejected         { -fx-base: #fecaca; }
+.status-combo.watch-not-applied       { -fx-base: #fef9c3; }
+.status-combo.watch-applied           { -fx-base: #e0e7ff; }
+
+/* 「気になる」で応募管理へ転記済みの行はグレーアウトする */
+.watch-table .table-row-cell:transferred {
+    -fx-background-color: #f3f4f6;
+}
+
+.watch-table .table-row-cell:transferred .table-cell {
+    -fx-text-fill: #9ca3af;
+}
+
+.watch-table .table-row-cell:transferred .status-combo {
+    -fx-opacity: 0.6;
+}
+
+.interview-editable {
+    -fx-cursor: hand;
+    -fx-text-fill: #1d4ed8;
+    -fx-underline: true;
+}
+
+.interview-not-set {
+    -fx-text-fill: #9ca3af;
+    -fx-underline: false;
+}
+
+/* ===== 右側パネル ===== */
+.side-panel {
+    -fx-padding: 0 0 0 4;
+}
+
+.side-title {
+    -fx-font-weight: bold;
+    -fx-text-fill: #374151;
+}
+
+.upcoming-list .list-cell {
+    -fx-padding: 8;
+}
+
+/* ===== フッター・ダイアログ ===== */
+.footer-label {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 11px;
+}
+
+.dialog-message {
+    -fx-text-fill: #374151;
+}
+
+.note-counter {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 11px;
+}
+
+.note-counter.note-counter-over {
+    -fx-text-fill: #dc2626;
+    -fx-font-weight: bold;
+}

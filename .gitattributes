@@ -1,0 +1,11 @@
+# 改行コードはリポジトリ内では LF に統一する
+* text=auto eol=lf
+
+# Windows 用スクリプトは CRLF (cmd.exe が LF だと誤動作することがあるため)
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# バイナリ
+*.jar binary
+*.png binary
+*.ico binary
